@@ -1,0 +1,21 @@
+$primary-color : grey;
+$secondary-color: #ff8c00;
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+//slowly change the color
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+      @return white;// 
+    } @else {
+      @return black;// 
+    }
+}
